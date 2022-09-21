@@ -1,10 +1,21 @@
-export default function Search({ searchTerm, setSearchTerm }) {
-  
-  
+import { useState } from 'react';
+
+export default function Search({ setSearchTerm }) {
+  const [currentSearchTerm, setCurrentSearchTerm] = useState('');
   return (
     <div>
-      <form>
-        <input value={searchTerm} type='text'/>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSearchTerm(currentSearchTerm);
+        }}
+      >
+        <input
+          value={currentSearchTerm}
+          onFocus={() => setCurrentSearchTerm('')}
+          onChange={(e) => setCurrentSearchTerm(e.target.value)}
+          type="text"
+        />
         <button>🔍</button>
       </form>
     </div>

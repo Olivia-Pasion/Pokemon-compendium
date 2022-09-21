@@ -34,12 +34,12 @@ export default function usePokemon() {
         const data = await fetchTypes();
         setTypes(data.map((type) => type.type));
       } catch (e) {
-      /* eslint-disable-next-line no-console */
+        /* eslint-disable-next-line no-console */
         console.error(e);
       }
     };
     fetchTypeList();
   }, []);
 
-  return { pokemonList, loading, types, selectedType, setSelectedType, searchTerm, setSearchTerm };
+  return { pokemonList, loading, types, selectedType, setSelectedType, setSearchTerm };
 }
