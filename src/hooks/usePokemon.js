@@ -8,6 +8,7 @@ import { fetchPokemon } from '../services/pokemon.js';
 export default function usePokemon() {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [types, setTypes] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,5 +25,12 @@ export default function usePokemon() {
     };
     fetchData();
   }, []);
+
+  const fetchType = async () => {
+    try{
+      
+    }
+  }
+
   return { pokemonList, loading };
 }
