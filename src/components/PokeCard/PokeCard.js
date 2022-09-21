@@ -1,3 +1,5 @@
+import './PokeCard.css';
+
 export default function PokeCard({ url_image, pokemon, type_1, type_2, hp }) {
   return (
     <div className="poke-card">

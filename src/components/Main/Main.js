@@ -1,3 +1,5 @@
+import './Main.css';
+
 import usePokemon from '../../hooks/usePokemon.js';
 import PokeList from '../PokeList/PokeList.js';
 
