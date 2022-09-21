@@ -1,10 +1,11 @@
 import usePokemon from '../../hooks/usePokemon.js';
+import PokeList from '../PokeList/PokeList.js';
 
 export default function Main() {
-  const pokemon = usePokemon();
+  const pokemonList = usePokemon();
   return (
     <div className='main'>
-      <div>{pokemon}</div>
+      <PokeList pokemonList={pokemonList}/>
     </div>
   );
 }
