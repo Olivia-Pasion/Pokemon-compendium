@@ -9,11 +9,12 @@ export default function usePokemon() {
   const [pokemonList, setPokemonList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [types, setTypes] = useState([]);
+  const [selectedType, setSelectedType] = useState('all');
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (selectedType) => {
       try {
-        const data = await fetchPokemon();
+        const data = await fetchPokemon(selectedType);
         setPokemonList(data);
         setTimeout(() => {
           setLoading(false);
@@ -23,8 +24,8 @@ export default function usePokemon() {
         console.error(e);
       }
     };
-    fetchData();
-  }, []);
+    fetchData(selectedType);
+  }, [selectedType]);
 
   useEffect(() => {
     const fetchTypeList = async () => {
@@ -39,5 +40,5 @@ export default function usePokemon() {
     fetchTypeList();
   }, []);
 
-  return { pokemonList, loading, types };
+  return { pokemonList, loading, types, selectedType, setSelectedType };
 }

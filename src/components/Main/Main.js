@@ -7,11 +7,11 @@ import Filter from '../Filter/Filter.js';
 import PokeList from '../PokeList/PokeList.js';
 
 export default function Main() {
-  const { pokemonList, loading, types } = usePokemon();
+  const { pokemonList, loading, types, selectedType, setSelectedType } = usePokemon();
   if (loading) return <div className="loader"></div>;
   return (
     <div className="main">
-      <Filter types={types}/>
+      <Filter types={types} selectedType={selectedType} setSelectedType={setSelectedType}/>
       <PokeList pokemonList={pokemonList} />
     </div>
   );
