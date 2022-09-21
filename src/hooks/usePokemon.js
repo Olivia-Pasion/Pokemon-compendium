@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 // services
-import { fetchPokemon } from '../services/pokemon.js';
+import { fetchPokemon, fetchTypes } from '../services/pokemon.js';
 
 // provides data from API
 export default function usePokemon() {
@@ -26,11 +26,18 @@ export default function usePokemon() {
     fetchData();
   }, []);
 
-  const fetchType = async () => {
-    try{
-      
-    }
-  }
+  useEffect(() => {
+    const fetchTypeList = async () => {
+      try {
+        const data = await fetchTypes();
+        setTypes(data.map((type) => type.type));
+      } catch (e) {
+      /* eslint-disable-next-line no-console */
+        console.error(e);
+      }
+    };
+    fetchTypeList();
+  }, []);
 
-  return { pokemonList, loading };
+  return { pokemonList, loading, types };
 }
