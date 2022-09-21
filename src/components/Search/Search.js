@@ -18,6 +18,9 @@ export default function Search({ setSearchTerm }) {
         />
         <button>🔍</button>
       </form>
+      <button className="home" onClick={() => setSearchTerm('')}>
+        Show All Pokemon
+      </button>
     </div>
   );
 }
