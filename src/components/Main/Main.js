@@ -15,6 +15,9 @@ export default function Main() {
     setSelectedType,
     searchTerm,
     setSearchTerm,
+    setPage,
+    totalPages,
+    page
   } = usePokemon();
   if (loading) return <div className="loader"></div>;
   return (
@@ -24,7 +27,10 @@ export default function Main() {
         selectedType={selectedType} 
         setSelectedType={setSelectedType} 
         searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm} 
+        setSearchTerm={setSearchTerm}
+        setPage={setPage}
+        totalPages={totalPages}
+        page={page}
       />
       <PokeList pokemonList={pokemonList} />
     </div>

@@ -11,12 +11,15 @@ export default function usePokemon() {
   const [types, setTypes] = useState([]);
   const [selectedType, setSelectedType] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [totalPages, setTotalPages] = useState(1);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
-    const fetchData = async (selectedType, searchTerm) => {
+    const fetchData = async (selectedType, searchTerm, page) => {
       try {
-        const data = await fetchPokemon(selectedType, searchTerm);
-        setPokemonList(data);
+        const data = await fetchPokemon(selectedType, searchTerm, page);
+        setPokemonList(data.results);
+        setTotalPages(Math.ceil(data.count / 10));
         setTimeout(() => {
           setLoading(false);
         }, 2000);
@@ -25,8 +28,8 @@ export default function usePokemon() {
         console.error(e);
       }
     };
-    fetchData(selectedType, searchTerm);
-  }, [selectedType, searchTerm]);
+    fetchData(selectedType, searchTerm, page);
+  }, [selectedType, searchTerm, page]);
 
   useEffect(() => {
     const fetchTypeList = async () => {
@@ -41,5 +44,5 @@ export default function usePokemon() {
     fetchTypeList();
   }, []);
 
-  return { pokemonList, loading, types, selectedType, setSelectedType, searchTerm, setSearchTerm };
+  return { pokemonList, loading, types, selectedType, setSelectedType, searchTerm, setSearchTerm, setPage, totalPages, page };
 }
