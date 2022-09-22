@@ -1,7 +1,10 @@
+import './Header.css';
 export default function Header() {
   return (
-    <div>
+    <header>
+      <img className='left-image' src='/assets/snorlax-peeking.png'></img>
       <h1>Pokemon Stable!</h1>
-    </div>
+      <img className='right-image' src='/assets/pikachu-peeking.png'></img>
+    </header>
   );
 }
