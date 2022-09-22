@@ -3,10 +3,8 @@ import './Main.css';
 import usePokemon from '../../hooks/usePokemon.js';
 
 // component imports
-import Header from '../Header/Header.js';
-import Filter from '../Filter/Filter.js';
 import PokeList from '../PokeList/PokeList.js';
-import Search from '../Search/Search';
+import Controls from '../Controls/Controls';
 
 export default function Main() {
   const {
@@ -20,9 +18,7 @@ export default function Main() {
   if (loading) return <div className="loader"></div>;
   return (
     <div className="main">
-      <Header />
-      <Filter types={types} selectedType={selectedType} setSelectedType={setSelectedType} />
-      <Search setSearchTerm={setSearchTerm} />
+      <Controls types={types} selectedType={selectedType} setSelectedType={setSelectedType} setSearchTerm={setSearchTerm} />
       <PokeList pokemonList={pokemonList} />
     </div>
   );

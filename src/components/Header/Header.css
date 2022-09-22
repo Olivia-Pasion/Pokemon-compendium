@@ -1,5 +1,6 @@
 header {
   display: flex;
+  gap: 50px;
   justify-content: center;
   align-items: baseline;
   align-content: center;
@@ -8,5 +9,9 @@ header {
 
 img {
   width: 150px;
+}
+
+h1 {
+  align-self: center;
 }
 
