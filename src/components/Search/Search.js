@@ -17,6 +17,7 @@ export default function Search({ searchTerm, setSearchTerm, setPage }) {
         onSubmit={(e) => {
           e.preventDefault();
           setSearchTerm(searchInput);
+          setPage(1);
         }}
       >
         <input
