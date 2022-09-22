@@ -1,0 +1,21 @@
+.controls {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 220px;
+  max-width: 1200px;
+  min-width: 200px;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 auto;
+}
+
+.filter-component {
+  display: flex;
+  margin: 85px 35px 35px 35px;
+}
+
+.search-component {
+  display: flex;
+  margin: 80px 35px 35px 35px;
+}
