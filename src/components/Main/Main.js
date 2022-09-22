@@ -13,12 +13,19 @@ export default function Main() {
     types,
     selectedType,
     setSelectedType,
+    searchTerm,
     setSearchTerm,
   } = usePokemon();
   if (loading) return <div className="loader"></div>;
   return (
     <div className="main">
-      <Controls types={types} selectedType={selectedType} setSelectedType={setSelectedType} setSearchTerm={setSearchTerm} />
+      <Controls 
+        types={types} 
+        selectedType={selectedType} 
+        setSelectedType={setSelectedType} 
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm} 
+      />
       <PokeList pokemonList={pokemonList} />
     </div>
   );

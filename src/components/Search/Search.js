@@ -1,26 +1,28 @@
 import { useState } from 'react';
 
-export default function Search({ setSearchTerm }) {
-  const [currentSearchTerm, setCurrentSearchTerm] = useState('');
+export default function Search({ searchTerm, setSearchTerm }) {
+  const [searchInput, setSearchInput] = useState('');
+  let showAllButton;
+
+  // Shows button that provides original list structure of data if there's a search term
+  if (searchTerm) showAllButton = (<button className="home" onClick={() => setSearchTerm('')}>Show All Pokemon</button>);
   return (
     <div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setSearchTerm(currentSearchTerm);
+          setSearchTerm(searchInput);
         }}
       >
         <input
-          value={currentSearchTerm}
-          onFocus={() => setCurrentSearchTerm('')}
-          onChange={(e) => setCurrentSearchTerm(e.target.value)}
+          value={searchInput}
+          onFocus={() => setSearchInput('')}
+          onChange={(e) => setSearchInput(e.target.value)}
           type="text"
         />
         <button>🔍</button>
       </form>
-      <button className="home" onClick={() => setSearchTerm('')}>
-        Show All Pokemon
-      </button>
+      {showAllButton} 
     </div>
   );
 }

@@ -41,5 +41,5 @@ export default function usePokemon() {
     fetchTypeList();
   }, []);
 
-  return { pokemonList, loading, types, selectedType, setSelectedType, setSearchTerm };
+  return { pokemonList, loading, types, selectedType, setSelectedType, searchTerm, setSearchTerm };
 }
