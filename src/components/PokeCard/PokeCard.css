@@ -3,6 +3,15 @@
   flex-direction: column;
 }
 
+.info {
+  border-radius: 2ch;
+  padding: 10px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+}
+
 span {
   margin: 4px;
 }

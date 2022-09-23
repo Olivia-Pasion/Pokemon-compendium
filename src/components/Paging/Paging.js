@@ -1,3 +1,5 @@
+import './Paging.css';
+
 export default function Paging({ page, setPage, totalPages }) {
   return (
     <div>
