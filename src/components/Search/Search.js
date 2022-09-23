@@ -15,7 +15,7 @@ export default function Search({ searchTerm, setSearchTerm, setPage }) {
     );
   return (
     <div>
-      <h4>Find A Pokemon</h4>
+      <h4 className="search-label">Find A Pokemon</h4>
       <form
         onSubmit={(e) => {
           e.preventDefault();

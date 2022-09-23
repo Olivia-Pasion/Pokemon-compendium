@@ -4,6 +4,7 @@ export default function Paging({ page, setPage, totalPages }) {
   return (
     <div>
       <button
+        className="page-button"
         onClick={() => {
           setPage((prevState) => {
             if (prevState !== 1) return prevState - 1;
@@ -15,10 +16,11 @@ export default function Paging({ page, setPage, totalPages }) {
       >
         Prev Page
       </button>
-      <span>
-        {page}/{totalPages}
+      <span className="page-numbers">
+        {page} / {totalPages}
       </span>
       <button
+        className="page-button"
         onClick={() => {
           setPage((prevState) => {
             if (prevState < totalPages) return prevState + 1;

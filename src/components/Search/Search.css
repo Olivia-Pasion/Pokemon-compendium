@@ -1,4 +1,5 @@
-input, button {
+input,
+button {
   padding: 8px;
   font-size: 1.1rem;
   border-radius: 5px;
@@ -12,4 +13,12 @@ input {
 button {
   background-color: white;
   border: 1px solid red;
+}
+
+h4 {
+  margin-bottom: 8px;
+}
+
+.search-label {
+  margin-bottom: 4px;
 }
