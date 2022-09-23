@@ -4,6 +4,7 @@ import './Filter.css';
 export default function Filter({ types, selectedType, setSelectedType, setPage }) {
   return (
     <div className="filter">
+      <h4>Filter By Type</h4>
       <select
         value={selectedType}
         onChange={(e) => {

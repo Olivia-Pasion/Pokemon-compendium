@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import './Search.css';
+
 export default function Search({ searchTerm, setSearchTerm, setPage }) {
   const [searchInput, setSearchInput] = useState('');
   let showAllButton;
@@ -13,11 +15,14 @@ export default function Search({ searchTerm, setSearchTerm, setPage }) {
     );
   return (
     <div>
+      <h4>Find A Pokemon</h4>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setSearchTerm(searchInput);
-          setPage(1);
+          if (searchInput) {
+            setSearchTerm(searchInput);
+            setPage(1);
+          }
         }}
       >
         <input
@@ -26,7 +31,7 @@ export default function Search({ searchTerm, setSearchTerm, setPage }) {
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
         />
-        <button>🔍</button>
+        <button className="submit">🔍</button>
       </form>
       {showAllButton}
     </div>

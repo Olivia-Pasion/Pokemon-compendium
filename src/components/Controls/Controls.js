@@ -16,18 +16,17 @@ export default function Controls({
 }) {
   return (
     <div className="controls" style={{ backgroundImage: `url(${background})` }}>
-      <div className="filter-component">
+      <div className="controls-container">
         <Filter
           types={types}
           selectedType={selectedType}
           setSelectedType={setSelectedType}
           setPage={setPage}
         />
-      </div>
-      <div className="search-component">
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} setPage={setPage} />
+        <Paging setPage={setPage} totalPages={totalPages} page={page} />
+
       </div>
-      <Paging setPage={setPage} totalPages={totalPages} page={page} />
     </div>
   );
 }
