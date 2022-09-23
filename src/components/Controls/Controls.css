@@ -19,6 +19,7 @@
   justify-content: center;
   gap: 50px;
   align-items: flex-end;
+  position: relative;
 }
 
 button:active {

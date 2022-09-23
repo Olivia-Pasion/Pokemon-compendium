@@ -9,7 +9,7 @@ export default function Search({ searchTerm, setSearchTerm, setPage }) {
   // Shows button that provides original list structure of data if there's a search term
   if (searchTerm)
     showAllButton = (
-      <button className="home" onClick={() => setSearchTerm('')}>
+      <button id="showAll" className="home" onClick={() => setSearchTerm('')}>
         Show All Pokemon
       </button>
     );
