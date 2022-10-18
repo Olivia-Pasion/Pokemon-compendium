@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+input,
+button {
+  padding: 8px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+input {
+  margin-right: 10px;
+  border: 1px solid red;
+}
+
+button {
+  background-color: white;
+  border: 1px solid red;
+}
+
+h4 {
+  margin-bottom: 8px;
+}
+
+.search-label {
+  margin-bottom: 4px;
+}
+
+#showAll {
+  position: absolute;
+  left: 40%;
+  right: 60%;
+  top: 130px;
+  padding: 5px;
+  width: 20%;
+  font-family: 'Silkscreen', cursive;
+  font-size: 15px;
+}

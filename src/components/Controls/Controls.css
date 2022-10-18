@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+.controls {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 220px;
+  max-width: 1200px;
+  min-width: 200px;
+  align-items: flex-start;
+  margin: 0 auto;
+  font-family: 'Silkscreen', cursive;
+}
+
+.controls-container {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+  align-items: flex-end;
+  position: relative;
+}
+
+button:active {
+  background-color: gray;
+}
+
+.page-button {
+  font-family: 'Silkscreen', cursive;
+}
+
+select {
+  font-family: 'Silkscreen', cursive;
+}
+
+input {
+  font-family: 'Silkscreen', cursive;
+}

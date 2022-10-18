@@ -1,3 +1,6 @@
+# Planning
+[Miro Board](https://miro.com/app/board/uXjVPUFtuyA=/?share_link_id=222936541009)
+
 # Alchemy React Base Template
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
